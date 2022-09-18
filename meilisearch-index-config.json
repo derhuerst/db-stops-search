@@ -1,13 +1,16 @@
 {
 	"searchableAttributes": [
 		"normalizedName",
-		"normalizedContext"
+		"normalizedContext",
+		"_geo"
 	],
 	"filterableAttributes": [
-		"weight"
+		"weight",
+		"_geo"
 	],
 	"sortableAttributes": [
-		"weight"
+		"weight",
+		"_geo"
 	],
 	"rankingRules": [
 		"words",

@@ -23,6 +23,10 @@ const normalizeStop = (stop, _, cb) => {
 		weight: stop.weight,
 		normalizedName: cleanedShortenedName || cleanedName,
 		normalizedContext: context,
+		_geo: {
+			lat: stop.location.latitude,
+			lng: stop.location.longitude,
+		},
 	})
 }
 
