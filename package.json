@@ -1,0 +1,41 @@
+{
+	"private": true,
+	"name": "db-stops-search",
+	"description": "Search through all stops/stations known by Deutsche Bahn's HAFAS API.",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"example.js"
+	],
+	"keywords": [
+		"deutsche bahn",
+		"db",
+		"rail",
+		"railway",
+		"stops",
+		"stations",
+		"search",
+		"fuzzy",
+		"typo",
+		"meilisearch"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/db-stops-search",
+	"repository": "derhuerst/db-stops-search",
+	"bugs": "https://github.com/derhuerst/db-stops-search/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=18"
+	},
+	"devDependencies": {
+		"eslint": "^8.0.0"
+	},
+	"scripts": {
+		"build": "./build-index.sh",
+		"test": "./test/index.sh",
+		"lint": "eslint .",
+		"prepublishOnly": "npm run lint && npm test && npm run build"
+	}
+}
