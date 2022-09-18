@@ -13,13 +13,11 @@ Formats and imports the stops into a [Meilisearch](https://meilisearch.com) inst
 
 ## Installation
 
-This project assumes that you have the following tools installed and in your `$PATH`:
+```shell
+npm install -g db-stops-search
+```
 
-- `bash`
-- [`curl`](https://curl.se/)
-- [`node` & `npm`](https://nodejs.org/en/)
-- [`jq`](https://stedolan.github.io/jq/)
-- [`pv`](https://linux.die.net/man/1/pv)
+Or use [`npx`](https://npmjs.com/package/npx). ✨
 
 
 ## Usage
@@ -29,17 +27,13 @@ First, configure & run a [Meilisearch](https://meilisearch.com) instance.
 Then use `db-stops-search` to import data into it:
 
 ```shell
-git clone https://github.com/derhuerst/db-stops-search.git
-cd db-stops-search
-npm install
-
 # configure how to connect to Meilisearch (optional):
 export MEILISEARCH_URL="https://my-meilisearch-instance.example.org"
 # configure the name of the search index to create (defaults to "db-stops-search"):
 export MEILISEARCH_INDEX="db-stops-2022-08-17"
 
 # import the data into Meilisearch
-npm run build
+npx db-stops-search
 ```
 
 The import process might look like this:

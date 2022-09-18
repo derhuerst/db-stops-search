@@ -4,10 +4,11 @@
 	"version": "1.0.0",
 	"type": "module",
 	"bin": {
-		"import-db-stops-into-meilisearch": "import.sh"
+		"import-db-stops-into-meilisearch": "import.js"
 	},
 	"files": [
-		"import.sh",
+		"import.js",
+		"index.js",
 		"lib",
 		"example.js"
 	],
@@ -31,13 +32,16 @@
 	"engines": {
 		"node": ">=18"
 	},
-	"devDependencies": {
+	"dependencies": {
+		"cross-fetch": "^3.1.5",
 		"db-clean-station-name": "^1.2.0",
-		"db-hafas-stations": "^1.0.0",
+		"db-hafas-stations": "^1.0.0"
+	},
+	"devDependencies": {
 		"eslint": "^8.0.0"
 	},
 	"scripts": {
-		"build": "./build-index.sh",
+		"build": "./import.js",
 		"test": "./test/index.sh",
 		"lint": "eslint .",
 		"prepublishOnly": "npm run lint && npm test && npm run build"
