@@ -1,0 +1,26 @@
+{
+	"searchableAttributes": [
+		"normalizedName",
+		"normalizedContext"
+	],
+	"filterableAttributes": [
+		"weight"
+	],
+	"sortableAttributes": [
+		"weight"
+	],
+	"rankingRules": [
+		"words",
+		"typo",
+		"proximity",
+		"attribute",
+		"sort",
+		"exactness",
+		"weight:desc"
+	],
+	"typoTolerance": {
+		"minWordSizeForTypos": {
+			"twoTypos": 8
+		}
+	}
+}

@@ -30,6 +30,8 @@
 		"node": ">=18"
 	},
 	"devDependencies": {
+		"db-clean-station-name": "^1.2.0",
+		"db-hafas-stations": "^1.0.0",
 		"eslint": "^8.0.0"
 	},
 	"scripts": {
