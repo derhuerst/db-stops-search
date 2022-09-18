@@ -1,12 +1,14 @@
 {
-	"private": true,
 	"name": "db-stops-search",
 	"description": "Search through all stops/stations known by Deutsche Bahn's HAFAS API.",
 	"version": "1.0.0",
 	"type": "module",
-	"main": "index.js",
+	"bin": {
+		"import-db-stops-into-meilisearch": "import.sh"
+	},
 	"files": [
-		"index.js",
+		"import.sh",
+		"lib",
 		"example.js"
 	],
 	"keywords": [

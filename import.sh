@@ -32,7 +32,7 @@ wait_for_task () {
 }
 
 task_id="$( \
-	curl -fs -X PATCH "$MEILISEARCH_URL/indexes/$MEILISEARCH_INDEX/settings" -H 'Content-Type: application/json' --data-binary @meilisearch-index-config.json \
+	curl -fs -X PATCH "$MEILISEARCH_URL/indexes/$MEILISEARCH_INDEX/settings" -H 'Content-Type: application/json' --data-binary @lib/meilisearch-index-config.json \
 	| jq -rc '.taskUid' \
 )"
 wait_for_task "$task_id" "re-configuration" 1
